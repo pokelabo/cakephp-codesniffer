@@ -13,7 +13,7 @@
  * @version   Release: 1.0.0
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff 
+class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
     implements PHP_CodeSniffer_Sniff
 {
 
@@ -30,8 +30,8 @@ class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
 
     /**
      * variable name length limit
-     * 
-     * @var integer 
+     *
+     * @var integer
      */
     public $maxlength = 30;
 
@@ -67,10 +67,9 @@ class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
 
         $name = $tokens[$stackPtr]['content'];
 
-        if (self::isUnderscoreName($name) === false) {
-            $error = 'Variable name "%s" does not use underscore format.
-                Upper case forbidden.';
-            $phpcsFile->addError($error, $stackPtr, 'NotUnderscore');
+        if (self::isCamelCaseName($name) === false) {
+            $error = sprintf('Variable name "%s" uses snake_case format.', $name);
+            $phpcsFile->addError($error, $stackPtr, 'Underscore');
         }
 
         // 変数名の長さ エラーにしない
@@ -88,33 +87,12 @@ class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
      *
      * @return boolean
      */
-    public static function isUnderscoreName($string)
+    public static function isCamelCaseName($string)
     {
-        // If there are space in the name, it can't be valid.
-        if (strpos($string, ' ') !== false) {
-            return false;
-        }
+        // If there are space or underscore in the name, it can't be valid.
+        // And the name should start with lower case.
+        return preg_match('/^\$(_+)?[a-z][^_\s]*$/', $string) === 1;
 
-        if ($string !== strtolower($string)) {
-            return false;
-        }
-
-        $validName = true;
-        $nameBits  = explode('_', $string);
-
-        foreach ($nameBits as $bit) {
-            if ($bit === '') {
-                continue;
-            }
-
-            if ($bit{0} !== strtolower($bit{0})) {
-                $validName = false;
-                break;
-            }
-        }
-
-        return $validName;
-
-    }//end isUnderscoreName()
+    }//end isCamelCaseName()
 }
 ?>

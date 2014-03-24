@@ -1,0 +1,23 @@
+{
+    "name": "pokelabo/pokelabo-aws-coding-standards",
+    "type": "library",
+    "description": "Pokelabo PHP coding standards for AWS environment",
+    "keywords": ["pokelabo", "standards", "codesniffer", "aws"],
+    "homepage": "http://pokelabo.jp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HANAI Tohru",
+            "email": "hanai@pokelabo.co.jp"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.10",
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pokelabo": ""
+        }
+    }
+}

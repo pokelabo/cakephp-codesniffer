@@ -1,3 +1,5 @@
-/build/
-/dist/
-tags
+*~
+\#*
+/composer.phar
+/composer.lock
+/vendor

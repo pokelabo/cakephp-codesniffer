@@ -16,8 +16,6 @@
         "squizlabs/php_codesniffer": "~1.5"
     },
     "autoload": {
-        "psr-0": {
-            "Pokelabo": ""
-        }
+        "classmap": ["Pokelabo"]
     }
 }

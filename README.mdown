@@ -7,13 +7,32 @@ and checks code against the coding standards used in Pokelabo.
 Installation
 ------------
 
+1. prepare `composer.json`.
+
+	```php
+	{
+	    "name": "myapp",
+	    "repositories": [
+	        {
+	            "type": "vcs",
+	            "url": "git@github.com:pokelabo/pokelabo-codesniffer.git"
+	        }
+	    ],
+	    "require": {
+	        "php": ">=5",
+	        "pokelabo/pokelabo-aws-coding-standards": "dev-standard/aws"
+	    }
+	}
+	```
+
+2. install composer and packages.
+
+    ```bash
     curl -sS https://getcomposer.org/installer | php
     ./composer.phar install
+	```
 
-Usage
------
 
-After installation you can check code compliance to the standard using
-`phpcs`:
+After installation you can check code compliance to the standard using `phpcs`:
 
-	phpcs --standard=Pokelabo /path/to/code
+	vendor/bin/phpcs --standard=vendor/pokelabo/pokelabo-aws-coding-standards/Pokelabo /path/to/code

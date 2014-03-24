@@ -1,5 +1,5 @@
 <?php
-namespace CakePHP\SniffTest;
+namespace Pokelabo\SniffTest;
 
 class TestFile
 {

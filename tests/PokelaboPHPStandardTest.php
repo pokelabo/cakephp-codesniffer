@@ -1,8 +1,8 @@
 <?php
 /**
- * CakePHPStandardTest
+ * PokelaboStandardTest
  */
-class CakePHPStandardTest extends PHPUnit_Framework_TestCase {
+class PokelaboStandardTest extends PHPUnit_Framework_TestCase {
     private $_validVariable = 0;
 
     /**
@@ -13,8 +13,8 @@ class CakePHPStandardTest extends PHPUnit_Framework_TestCase {
     public static function testProvider() {
         $testCases = array();
         $standard = dirname(dirname(__FILE__));
-        if (basename($standard) !== 'CakePHP') {
-            PHPUnit_Framework_TestCase::fail("The dirname for the standard must be CakePHP");
+        if (basename($standard) !== 'Pokelabo') {
+            PHPUnit_Framework_TestCase::fail("The dirname for the standard must be Pokelabo");
         }
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(dirname(__FILE__) . '/files'));
         foreach ($iterator as $dir) {

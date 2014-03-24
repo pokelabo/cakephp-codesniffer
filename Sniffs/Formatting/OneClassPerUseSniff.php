@@ -1,32 +1,32 @@
 <?php
 /**
- * CakePHP_Sniffs_Formatting_OneClassPerUseSniff
+ * Pokelabo_Sniffs_Formatting_OneClassPerUseSniff
  *
  * PHP version 5
  *
  * @category  PHP
- * @package   PHP_CodeSniffer_CakePHP
+ * @package   PHP_CodeSniffer_Pokelabo
  * @author    Juan Basso <jrbasso@gmail.com>
  * @copyright Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  * @version   1.0
- * @link      http://pear.php.net/package/PHP_CodeSniffer_CakePHP
+ * @link      http://pear.php.net/package/PHP_CodeSniffer_Pokelabo
  */
 
 /**
- * CakePHP_Sniffs_Formatting_OneClassPerUseSniff.
+ * Pokelabo_Sniffs_Formatting_OneClassPerUseSniff.
  *
  * Ensures the use contains only one class.
  *
  * @category  PHP
- * @package   PHP_CodeSniffer_CakePHP
+ * @package   PHP_CodeSniffer_Pokelabo
  * @author    Juan Basso <jrbasso@gmail.com>
  * @copyright Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  * @version   1.0
- * @link      http://pear.php.net/package/PHP_CodeSniffer_CakePHP
+ * @link      http://pear.php.net/package/PHP_CodeSniffer_Pokelabo
  */
-class CakePHP_Sniffs_Formatting_OneClassPerUseSniff implements PHP_CodeSniffer_Sniff {
+class Pokelabo_Sniffs_Formatting_OneClassPerUseSniff implements PHP_CodeSniffer_Sniff {
 
 /**
  * Returns an array of tokens this test wants to listen for.

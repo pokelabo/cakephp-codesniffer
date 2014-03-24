@@ -1,6 +1,6 @@
 <?php
-use CakePHP\Test,
-    CakePHP\Fail;
+use Pokelabo\Test,
+    Pokelabo\Fail;
 
 class Foo {
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace CakePHP;
+namespace Pokelabo;
 
 use Other\Crap;
 use Other\Error as OtherError;
@@ -11,8 +11,8 @@ class Throws {
  * Test throws
  *
  * @throws Exception
- * @throws CakePHP\Boom
- * @throws CakePHP\Error\Boom
+ * @throws Pokelabo\Boom
+ * @throws Pokelabo\Error\Boom
  * @throws Other\Crap
  * @throws Other\Error\Issue
  */

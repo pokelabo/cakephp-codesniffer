@@ -1,16 +1,16 @@
 <?php
 /**
- * CakePHP_Sniffs_NamingConventions_ValidFunctionNameSniff
+ * Pokelabo_Sniffs_NamingConventions_ValidFunctionNameSniff
  *
  * PHP version 5
  *
  * @category  PHP
- * @package   PHP_CodeSniffer_CakePHP
+ * @package   PHP_CodeSniffer_Pokelabo
  * @author    Juan Basso <jrbasso@gmail.com>
  * @copyright Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  * @version   1.0
- * @link      http://pear.php.net/package/PHP_CodeSniffer_CakePHP
+ * @link      http://pear.php.net/package/PHP_CodeSniffer_Pokelabo
  */
 
 if (class_exists('PHP_CodeSniffer_Standards_AbstractScopeSniff', true) === false) {
@@ -18,20 +18,20 @@ if (class_exists('PHP_CodeSniffer_Standards_AbstractScopeSniff', true) === false
 }
 
 /**
- * CakePHP_Sniffs_NamingConventions_ValidFunctionNameSniff.
+ * Pokelabo_Sniffs_NamingConventions_ValidFunctionNameSniff.
  *
  * Ensures method names are correct depending on whether they are public
  * or private, and that functions are named correctly.
  *
  * @category  PHP
- * @package   PHP_CodeSniffer_CakePHP
+ * @package   PHP_CodeSniffer_Pokelabo
  * @author    Juan Basso <jrbasso@gmail.com>
  * @copyright Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  * @version   1.0
- * @link      http://pear.php.net/package/PHP_CodeSniffer_CakePHP
+ * @link      http://pear.php.net/package/PHP_CodeSniffer_Pokelabo
  */
-class CakePHP_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeSniffer_Standards_AbstractScopeSniff {
+class Pokelabo_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeSniffer_Standards_AbstractScopeSniff {
 
 /**
  * A list of all PHP magic methods.
@@ -136,7 +136,7 @@ class CakePHP_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeSn
 //			} else {
 //				$filename = $phpcsFile->getFilename();
 //				if (strpos($filename, '/lib/Cake/') === true) {
-//					$warning = 'Private method name "%s" in CakePHP core is discouraged';
+//					$warning = 'Private method name "%s" in Pokelabo core is discouraged';
 //					$phpcsFile->addWarning($warning, $stackPtr, 'PrivateMethodInCore', $errorData);
 //				}
 //			}

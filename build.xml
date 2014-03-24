@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-	Phing build file for CakePHP coding standards.
+	Phing build file for Pokelabo coding standards.
 	Used to create pear pacakages.
 	Requires the d51PearPkg2 to be installed:
 
@@ -11,7 +11,7 @@
 	Use the `distribute` task to upload the pear package.
 	Use the `clean` task to clean up packaging artifacts.
 -->
-<project name="CakePHP-CodeSniffer" default="build">
+<project name="Pokelabo-CodeSniffer" default="build">
 
 	<taskdef classname="phing.tasks.ext.d51PearPkg2Task" name="d51pearpkg2" />
 
@@ -21,7 +21,7 @@
 	<!-- Shouldn't have to change these -->
 	<property name="build.dir" value="build" />
 	<property name="dist.dir" value="dist" />
-	<property name="project.name" value="CakePHP_CodeSniffer" />
+	<property name="project.name" value="Pokelabo_CodeSniffer" />
 	<property name="pear.package" value="${project.name}-${version}" />
 	<property name="pirum.dir" value="/home/cakephp/www-live/pear.cakephp.org" />
 
@@ -58,11 +58,11 @@
 		Define the package.xml.  Using xml to make xml is fun!
 	-->
 	<target name="define-pear-package" depends="copy-files">
-		<d51pearpkg2 baseinstalldir="PHP/CodeSniffer/Standards/CakePHP" dir="${build.dir}/${pear.package}">
-			<name>CakePHP_CodeSniffer</name>
-			<summary>PHP_CodeSniffer rules for CakePHP</summary>
+		<d51pearpkg2 baseinstalldir="PHP/CodeSniffer/Standards/Pokelabo" dir="${build.dir}/${pear.package}">
+			<name>Pokelabo_CodeSniffer</name>
+			<summary>PHP_CodeSniffer rules for Pokelabo</summary>
 			<channel>pear.cakephp.org</channel>
-			<description>PHP_CodeSniffer rules for checking code against the CakePHP coding standards.</description>
+			<description>PHP_CodeSniffer rules for checking code against the Pokelabo coding standards.</description>
 
 			<lead user="mark_story" name="Mark Story" email="mark@mark-story.com" />
 			<developer user="jrbasso" name="Juan Basso" email="jrbasso@gmail.com" />

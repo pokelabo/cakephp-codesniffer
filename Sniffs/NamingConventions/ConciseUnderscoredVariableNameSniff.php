@@ -1,7 +1,7 @@
 <?php
 
 /**
- * CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff.
+ * Pokelabo_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff.
  *
  * Ensures variable names use underscore format and are not too long;
  *
@@ -13,7 +13,7 @@
  * @version   Release: 1.0.0
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class CakePHP_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
+class Pokelabo_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
     implements PHP_CodeSniffer_Sniff
 {
 

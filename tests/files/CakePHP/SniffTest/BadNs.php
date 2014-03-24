@@ -1,5 +1,5 @@
 <?php
 
-namespace CakePHP;
+namespace Pokelabo;
 class BadNs {
 }

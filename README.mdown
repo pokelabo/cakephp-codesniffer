@@ -1,8 +1,8 @@
-CakePHP Code Sniffer
+Pokelabo Code Sniffer
 ====================
 
 This code works with [phpcs](http://pear.php.net/manual/en/package.php.php-codesniffer.php)
-and checks code against the coding standards used in CakePHP.
+and checks code against the coding standards used in Pokelabo.
 
 Installation
 ------------
@@ -11,7 +11,7 @@ Its generally recommended to install these code sniffs with the PEAR
 installer:
 
 	pear channel-discover pear.cakephp.org
-	pear install cakephp/CakePHP_CodeSniffer
+	pear install cakephp/Pokelabo_CodeSniffer
 
 Usage
 -----
@@ -19,9 +19,9 @@ Usage
 After installation you can check code compliance to the standard using
 `phpcs`:
 
-	phpcs --standard=CakePHP /path/to/code
+	phpcs --standard=Pokelabo /path/to/code
 
-Releasing CakePHP Code Sniffer
+Releasing Pokelabo Code Sniffer
 ==============================
 
 * Update version number in build.xml

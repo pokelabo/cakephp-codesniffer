@@ -37,7 +37,7 @@
  <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
  <rule ref="PSR2.Namespaces.UseDeclaration"/>
 
- <rule ref="Generic.NamingConventions.ConstructorName"/>
+ <!-- rule ref="Generic.NamingConventions.ConstructorName"/ -->
  <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
  <rule ref="PEAR.NamingConventions.ValidClassName"/>
 

@@ -145,7 +145,8 @@ class Pokelabo_Sniffs_Commenting_FunctionCommentThrowTagSniff extends PHP_CodeSn
 				// Exception type in @throws tag must be thrown in the function.
 				foreach ($throwTags as $i => $throwTag) {
 					$errorPos = ($commentStart + $lineNumber[$throwTag]);
-					if (empty($throwTag) === false && $throwTag !== $throwTokens[$i]) {
+					if (empty($throwTag) === false && $throwTag !== $throwTokens[$i] &&
+						$namespace . '\\' . $throwTag !== $throwTokens[$i]) {
 						$error = 'Expected "%s" but found "%s" for @throws tag exception';
 						$data = array(
 							$throwTokens[$i],
@@ -255,11 +256,12 @@ class Pokelabo_Sniffs_Commenting_FunctionCommentThrowTagSniff extends PHP_CodeSn
 			}
 
 			if (isset($uses[$basename])) {
-				$formatted[] = trim($uses[$basename] . '\\' . $complement, '\\');
+				$formatted[] = $basename;
 				continue;
 			}
 
-			$formatted[] = trim($namespace . '\\' . $throw, '\\');
+			$parts = explode('\\', $throw);
+			$formatted[] = end($parts);
 		}
 
 		// Only need one @throws tag for each type of exception thrown.

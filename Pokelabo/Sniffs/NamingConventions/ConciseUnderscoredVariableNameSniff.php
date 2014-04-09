@@ -67,7 +67,7 @@ class Pokelabo_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
 
         $name = $tokens[$stackPtr]['content'];
 
-        if (self::isCamelCaseName($name) === false) {
+        if (!self::isCamelCaseName($name) && !self::isScreamingSnakeCase($name)) {
             $error = sprintf('Variable name "%s" uses snake_case format.', $name);
             $phpcsFile->addError($error, $stackPtr, 'Underscore');
         }
@@ -81,7 +81,7 @@ class Pokelabo_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
     }
 
     /**
-     * Returns true if the specified string is in the underscore caps format.
+     * Returns true if the specified string is in the camelCase format.
      *
      * @param string $string The string to verify.
      *
@@ -92,6 +92,21 @@ class Pokelabo_Sniffs_NamingConventions_ConciseUnderscoredVariableNameSniff
         // If there are space or underscore in the name, it can't be valid.
         // And the name should start with lower case.
         return preg_match('/^\$(_+)?[a-z][^_\s]*$/', $string) === 1;
+
+    }//end isCamelCaseName()
+
+    /**
+     * Returns true if the specified string is in the SCREAMING_SNAKE_CASE format.
+     *
+     * @param string $string The string to verify.
+     *
+     * @return boolean
+     */
+    public static function isScreamingSnakeCase($string)
+    {
+        // If there are space or underscore in the name, it can't be valid.
+        // And the name should start with lower case.
+        return preg_match('/^\$[A-Z0-9_]+$/', $string) === 1;
 
     }//end isCamelCaseName()
 }

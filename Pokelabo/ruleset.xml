@@ -7,9 +7,7 @@
  <!-- 2.1 Basic Coding Standard -->
 
  <!-- Include the whole PSR-1 standard -->
- <rule ref="PSR1">
-   <exclude name="PSR1.Files.SideEffects"/>
- </rule>
+ <rule ref="PSR1"/>
 
  <!-- 2.2 Files -->
 
